@@ -1,10 +1,10 @@
 module tb();
   
-    wire clk;
-    wire reset;
+    reg clk;
+    reg reset;
 
     // instantiate device to be tested
-    mipstop mipstop(clk, reset);
+    top mipstop(clk, reset);
 
     // initialize test 
     initial
