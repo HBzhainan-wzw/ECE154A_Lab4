@@ -8,11 +8,11 @@ module dmem(input          clk, we,
 // **PUT YOUR CODE HERE**
   reg [31:0] mem[63:0];
 
-  assign rd=mem[address[31:2]]; //word aligned
+  assign rd = mem[a[31:2]]; //word aligned
 
   always @(posedge clk)
     if (we)
-       mem[address[31:2]]<=wd;
+       mem[a[31:2]]<=wd;
 endmodule
           
 
