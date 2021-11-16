@@ -37,13 +37,16 @@ module controller(input   [5:0] op, funct,
 // **PUT YOUR CODE HERE**
     wire [1:0] aluop;
     wire branch;
+    //////////////////Modified code here/////////////////////////
 	wire bne; //add bne wire to check for bne
 
+    //////////////////Modified code here/////////////////////////
     maindec md(op, memtoreg, memwrite, branch,
                 alusrc, regdst, regwrite, jump, aluop,
 		bne); //add bne to maindec as output
     aludec ad(funct, aluop, alucontrol);
 
+    //////////////////Modified code here/////////////////////////
     assign pcsrc = (branch & zero) | (bne & ~zero); //pcsrc now also can be triggered for bne
 
 endmodule
@@ -56,6 +59,7 @@ module maindec(input [5:0] op,
                 output  [1:0] aluop,
 		        output bne); //add bne to maindec as output
                 reg [9:0] controls; //add extra bit for bne
+    //////////////////Modified code here/////////////////////////
     assign {regwrite, regdst, alusrc, branch, memwrite,
             memtoreg, jump, aluop, bne} = controls; //add bne
 
@@ -67,6 +71,7 @@ module maindec(input [5:0] op,
             6'b000100: controls <= 10'b0001000010; // BEQ
             6'b001000: controls <= 10'b1010000000; // ADDI
             6'b000010: controls <= 10'b0000001000; // J
+            //////////////////Modified code here/////////////////////////
             6'b001101: controls <= 10'b1010000110; //ori
             6'b000101:controls <= 10'b0001000011; //bne
             default: controls <= 9'bxxxxxxxxx; // illegal op
@@ -81,8 +86,8 @@ module aludec(input [5:0] funct,
     	case(aluop)
         	2'b00: alucontrol <= 3'b010; // add (for lw/sw/addi)
         	2'b01: alucontrol <= 3'b110; // sub (for beq) and bne
+            //////////////////Modified code here/////////////////////////
 		    2'b11: alucontrol <= 3'b001; // or for ori		
-
         default: case(funct) // R-type instructions
             6'b100000: alucontrol <= 3'b010; // add
             6'b100010: alucontrol <= 3'b110; // sub
