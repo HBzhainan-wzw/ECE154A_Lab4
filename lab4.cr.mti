@@ -1,0 +1,21 @@
+/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipstop.v {1 {vlog -work work -vopt -stats=none /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipstop.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 22 2018
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v {0 {vlog -work work -vopt -stats=none /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 22 2018
+-- Compiling module dmem
+** Error: /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v(11): (vlog-2730) Undefined variable: 'address'.
+-- Compiling module imem
+
+} {4.0 5.0} {}} /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/ALU.v {1 {vlog -work work -vopt -stats=none /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/ALU.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 22 2018
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}}
