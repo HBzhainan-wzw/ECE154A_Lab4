@@ -7,341 +7,345 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-d/fs/student/zhiwen_wu/ECE154A/ECE154A-Lab1
+Z0 d/fs/student/zhiwen_wu/ECE154A/ECE154A-Lab1
+T_opt
+!s110 1637040288
+V06fGnO^ofDC?AZS9JCUGk3
+04 3 4 work top fast 0
+=1-000ae431a4f1-619340a0-3b501-b21
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.6e;65
+R0
+T_opt1
+!s110 1637040302
+V0RDlKG6DDcDIZnTG5m3g<2
+04 2 4 work tb fast 0
+=1-000ae431a4f1-619340ae-a45ee-b86
+R1
+R2
+n@_opt1
+R3
+R0
 vadder
-Z0 !s110 1637039227
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
 !i10b 1
 !s100 b:j2Sf_hDeJ7@RU1NZhV80
 IJMZS]]hW6LXXUGX=1P>8o1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 d/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4
-Z3 w1637039225
-Z4 8/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mips.v
-Z5 F/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mips.v
+Z5 d/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4
+Z6 w1637039828
+Z7 8/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mips.v
+Z8 F/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mips.v
 L0 156
-Z6 OL;L;10.6e;65
+Z9 OL;L;10.6e;65
+Z10 !s108 1637040399.000000
+Z11 !s107 /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mips.v|
+Z12 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mips.v|
+!i113 0
+Z13 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vALU
+R4
 r1
 !s85 0
 31
-Z7 !s108 1637039227.000000
-Z8 !s107 /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mips.v|
-Z9 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mips.v|
-!i113 0
-Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z11 tCvgOpt 0
-vALU
-R0
 !i10b 1
 !s100 ba0BcT=TK95^`n0am4M121
 I<QI6`GGMHAe:FD2LWC80L0
-R1
-R2
-Z12 w1637007150
+R5
+Z14 w1637007150
 8/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/ALU.v
 F/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/ALU.v
 L0 1
-R6
-r1
-!s85 0
-31
-R7
+R9
+!s108 1637040398.000000
 !s107 /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/ALU.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/ALU.v|
 !i113 0
-R10
-R11
+R13
+R2
 n@a@l@u
 valudec
-R0
-!i10b 1
-!s100 z;PzM^Ebj:aF8HI8kOMDm3
-IblhS6j_K4W<?fREd3dh3^3
-R1
-R2
-R3
 R4
-R5
-L0 73
-R6
 r1
 !s85 0
 31
+!i10b 1
+!s100 C<z<]Ul^ck]O4?hm[SE>93
+I?akBl@]k@DSLj8nZW;4iO3
+R5
+R6
 R7
 R8
+L0 73
 R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 vcontroller
-R0
+R4
+r1
+!s85 0
+31
 !i10b 1
 !s100 <iH<:=@3_oOT;jTPf^7bI0
 IJbBdOVPn?cjS`MCU]Zn9I3
-R1
-R2
-R3
-R4
 R5
+R6
+R7
+R8
 L0 29
-R6
-r1
-!s85 0
-31
-R7
-R8
 R9
-!i113 0
 R10
 R11
-vdatapath
-R0
-!i10b 1
-!s100 1>m<V96ge3k9X550PR=F_0
-IO5Y?hJz^E2Pi`i:AGA;GA3
-R1
+R12
+!i113 0
+R13
 R2
-R3
+vdatapath
 R4
-R5
-L0 95
-R6
 r1
 !s85 0
 31
+!i10b 1
+!s100 @BQzj:VfHCXKe3e=7oM;;2
+I9j=l^[eOL0O<C?iC7Sl[>2
+R5
+R6
 R7
 R8
+L0 95
 R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 vdmem
-R0
+R4
+r1
+!s85 0
+31
 !i10b 1
 !s100 O1aeEb;`kEA=FHF_2O2IW0
 I366zHMFlXaOFBRUOTGCzP1
-R1
-R2
-Z13 w1637038770
-Z14 8/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v
-Z15 F/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v
+R5
+Z15 w1637038770
+Z16 8/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v
+Z17 F/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v
 L0 4
-R6
+R9
+R10
+Z18 !s107 /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v|
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v|
+!i113 0
+R13
+R2
+vflopr
+R4
 r1
 !s85 0
 31
-R7
-Z16 !s107 /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v|
-Z17 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipsmem.v|
-!i113 0
-R10
-R11
-vflopr
-R0
 !i10b 1
 !s100 gdFZ@eaLCNgSDe:E;X8aJ2
 Iz^AS3NoKhQinaAVGfN>WL2
-R1
-R2
-R3
-R4
 R5
-L0 174
 R6
+R7
+R8
+L0 174
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R2
+vimem
+R4
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-vimem
-R0
 !i10b 1
 !s100 V?S67IRcI86bf_iC4K55;3
 I:fUK9j<;dJ5Z`P]43<SAH1
-R1
-R2
-R13
-R14
+R5
 R15
-L0 21
-R6
-r1
-!s85 0
-31
-R7
 R16
 R17
-!i113 0
+L0 21
+R9
 R10
-R11
-vmaindec
-R0
-!i10b 1
-!s100 >e2;9Z6MgGYGnNUWZO7[n3
-I]9eKj5L73kkM:BDR48fP_3
-R1
+R18
+R19
+!i113 0
+R13
 R2
-R3
+vmaindec
 R4
-R5
-L0 48
-R6
 r1
 !s85 0
 31
+!i10b 1
+!s100 1Me2YVj`8cQ9H<_8Gk[[>2
+IWPN?^<7ZCSg<BQbOCZMQz2
+R5
+R6
 R7
 R8
+L0 48
 R9
-!i113 0
 R10
 R11
+R12
+!i113 0
+R13
+R2
 vmips
-R0
+R4
+r1
+!s85 0
+31
 !i10b 1
 !s100 4iCDbU@92?CFZin[;IhoH2
 IOhC@C0fzz6eQP<jm7R[G42
-R1
-R2
-R3
-R4
 R5
-L0 4
 R6
+R7
+R8
+L0 4
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R2
+vmux2
+R4
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-vmux2
-R0
 !i10b 1
 !s100 <j7m8Y0>lG;0SBjLV2WXe1
 IOVA;nKMVC[_`PI@d7P3cm2
-R1
-R2
-R3
-R4
 R5
-L0 184
 R6
+R7
+R8
+L0 184
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R2
+vregfile
+R4
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-vregfile
-R0
 !i10b 1
 !s100 1NI6Blh_g7H7E>VKFVo8]3
 I[OT_OAP7K11dBES:HWPI^0
-R1
-R2
-R3
-R4
 R5
-L0 134
 R6
+R7
+R8
+L0 134
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R2
+vsignext
+R4
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-vsignext
-R0
 !i10b 1
 !s100 oiOSiKnAnBIJJZmKUXZob3
 Ief]mF:TRgT?XajGNRDcQA0
-R1
-R2
-R3
-R4
 R5
-L0 168
 R6
+R7
+R8
+L0 168
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R2
+vsl2
+R4
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-vsl2
-R0
 !i10b 1
 !s100 3]ZIPTImbVEk:`CoFd:[R0
 IA87kk5mFeeNgf4Vc^h`4G0
-R1
-R2
-R3
-R4
 R5
-L0 162
 R6
+R7
+R8
+L0 162
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R2
+vtb
+R4
 r1
 !s85 0
 31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-vtb
-!s110 1637039228
 !i10b 1
 !s100 3_=TaE62_7bG4]XN]mSeW2
 I2b4Qe2QM2bcZ:i2hhK8GA3
-R1
-R2
-R13
+R5
+R15
 8/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/tb.v
 F/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/tb.v
 L0 1
-R6
-r1
-!s85 0
-31
-!s108 1637039228.000000
+R9
+R10
 !s107 /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/tb.v|
 !i113 0
-R10
-R11
-vtop
-R0
-!i10b 1
-!s100 KkcbYC2`@0=FQ8W97L`CO3
-IVM`ENKe7V64FoR`VKY;b]0
-R1
+R13
 R2
-R12
-8/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipstop.v
-F/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipstop.v
-L0 3
-R6
+vtop
+R4
 r1
 !s85 0
 31
-R7
+!i10b 1
+!s100 KkcbYC2`@0=FQ8W97L`CO3
+IVM`ENKe7V64FoR`VKY;b]0
+R5
+R14
+8/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipstop.v
+F/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipstop.v
+L0 3
+R9
+R10
 !s107 /fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipstop.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/fs/student/zhiwen_wu/ECE154A/ECE154A_Lab4/mipstop.v|
 !i113 0
-R10
-R11
+R13
+R2
