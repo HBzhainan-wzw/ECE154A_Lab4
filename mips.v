@@ -38,34 +38,36 @@ module controller(input   [5:0] op, funct,
     wire [1:0] aluop;
     wire branch;
 
-    maindec md(op, memtoreg, memwrite, branch, alusrc, regdst, regwrite, jump, aluop);
+    maindec md(op, memtoreg, memwrite, branch, alusrc, regdst, regwrite, jump, aluop, BNE);
     aludec ad(funct, aluop, alucontrol);
 
-    assign pcsrc = branch & zero;
+    assign pcsrc = (branch & zero) | (BNE & ~zero);
 
 endmodule
 
 module maindec(input [5:0] op,
-              output        memtoreg, memwrite,
-              output        branch, alusrc,
-              output        regdst, regwrite,
-              output        jump,
-              output  [1:0] aluop);
+              output memtoreg, memwrite,
+              output branch, alusrc,
+              output regdst, regwrite,
+              output jump,
+              output [1:0] aluop,
+              output BNE);
 
-    reg[8:0] controls;
+    reg[9:0] controls;
 
-    
-    assign{regwrite, regdst, alusrc, branch, memwrite, memtoreg, jump, aluop} = controls;
+    assign{regwrite, regdst, alusrc, branch, memwrite, memtoreg, jump, aluop, BNE} = controls;
 
     always @(op) begin
         case(op)
-            6'b000000: controls <= 9'b110000010; // RTYPE
-            6'b100011: controls <= 9'b101001000; // LW
-            6'b101011: controls <= 9'b001010000; // SW 
-            6'b000100: controls <= 9'b000100001; // BEQ 
-            6'b001000: controls <= 9'b101000000; // ADDI 
-            6'b000010: controls <= 9'b000000100; // J
-            default: controls <= 9'bxxxxxxxxx; // illegal op
+            6'b000000: controls <= 10'b1100000100; // RTYPE
+            6'b100011: controls <= 10'b1010010000; // LW
+            6'b101011: controls <= 10'b0010100000; // SW 
+            6'b000100: controls <= 10'b0001000010; // BEQ 
+            6'b000101: controls <= 10'b0001000011; // BNE 
+            6'b001000: controls <= 10'b1010000000; // ADDI 
+            6'b000010: controls <= 10'b0000001000; // J
+            6'b001101: controls <= 10'b1010001100; // ORI
+            default: controls <= 10'bxxxxxxxxxx; // illegal op
         endcase
     end
 endmodule
@@ -74,11 +76,11 @@ module aludec(input [5:0] funct,
              input  [1:0] aluop,
              output  reg[2:0] alucontrol);
 
-    always @(aluop, funct) begin
+    always @* 
         case(aluop)
             2'b00: alucontrol <= 3'b010; // add (for lw/sw/addi)
-            2'b01: alucontrol <= 3'b011; // sub (for beq)
-            default: case(funct)         // R-type instructions
+            2'b01: alucontrol <= 3'b110; // sub (for beq)
+        default: case(funct)         // R-type instructions
                 6'b100000: alucontrol <= 3'b010; // add
                 6'b100010: alucontrol <= 3'b110; // sub
                 6'b100100: alucontrol <= 3'b000; // and
@@ -87,7 +89,6 @@ module aludec(input [5:0] funct,
                 default: alucontrol <= 3'bxxx; // ???
             endcase
         endcase
-    end
 endmodule
 
 
@@ -112,18 +113,19 @@ module datapath(input          clk, reset,
 
     // next PC logic
     flopr #(32) pcreg(clk, reset, pcnext, pc);
-    adder pcadd1 (pc, 32'b100, pcplus4);
-    sl2 immsh(signimm, signimmsh);
-    adder pcadd2 (pcplus4, signimmsh, pcbranch);
+    adder       pcadd1(pc, 32'b100, pcplus4);
+    sl2         immsh(signimm, signimmsh);
+    adder       pcadd2(pcplus4, signimmsh, pcbranch);
     mux2 #(32) pcbrmux (pcplus4 , pcbranch, pcsrc, pcnextbr);
-    mux2 #(32) pcmux (pcnextbr, {pcplus4[31 :28], instr[25:0], 2'b00}, jump, pcnext);
+    mux2 #(32) pcmux (pcnextbr, {pcplus4[31:28], instr[25:0], 2'b00}, jump, pcnext);
 
     // register file logic
-    regfile rf (clk, rewrite, instr[25:21], instr[20:16], writereg, result, srca, writedata);
-
-    mux2 #(5) wrmux(instr[20:16], instr[15:11], regdst, writereg);
-    mux2 #(32) resmux(aluout, readdata, memtoreg, result);
-    signext se(instr[15:0], signimm);
+    regfile rf(clk, regwrite, instr[25:21], instr[20:16],
+                writereg, result, srca, writedata);
+    mux2 #(5) wrmux(instr[20:16], instr[15:11],
+                    regdst, writereg);
+    mux2 #(32)  resmux(aluout, readdata, memtoreg, result);
+    signext     se(instr[15:0], signimm);
 
     // ALU logic
     mux2 #(32) srcbmux (writedata, signimm, alusrc, srcb);
